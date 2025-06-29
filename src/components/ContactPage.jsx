@@ -1,8 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Mail, MapPin, Linkedin, ChevronRight } from 'lucide-react';
 
-const ContactPage = () => (
-  <div className="min-h-screen pt-24 pb-16">
+const ContactPage = () => {
+  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus(null);
+    try {
+      const webhookUrl = 'https://discord.com/api/webhooks/1388825218730168420/Kwa3hmEk_dSlZtWoGEdRfCDMX50v2G1sH-P4ZnVzdhNhtGoQfyduTeAU2P60w7k_jTKw'; // <-- Replace with your Discord webhook URL
+      const content = `**New Portfolio Contact Form Submission**\n\n**Name:** ${form.name}\n**Email:** ${form.email}\n**Subject:** ${form.subject}\n**Message:** ${form.message}`;
+      const res = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ content })
+      });
+      if (res.ok) {
+        setStatus('Message sent successfully!');
+        setForm({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setStatus('Failed to send message.');
+      }
+    } catch (err) {
+      setStatus('Failed to send message.');
+    }
+    setLoading(false);
+  };
+
+  return (
+    <div className="min-h-screen pt-24 pb-16">
     <div className="max-w-4xl mx-auto px-4">
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -64,50 +97,71 @@ const ContactPage = () => (
         </div>
         <div className="bg-gray-800/30 rounded-xl p-8 border border-gray-700">
           <h3 className="text-xl font-bold text-white mb-6">Send a Message</h3>
-          <div className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <div className="block text-gray-300 text-sm mb-2">Name</div>
-              <input 
-                type="text" 
+              <input
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
                 className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:border-blue-500 focus:outline-none transition-colors"
                 placeholder="Your name"
+                required
               />
             </div>
             <div>
               <div className="block text-gray-300 text-sm mb-2">Email</div>
-              <input 
-                type="email" 
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
                 className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:border-blue-500 focus:outline-none transition-colors"
                 placeholder="Your email"
+                required
               />
             </div>
             <div>
               <div className="block text-gray-300 text-sm mb-2">Subject</div>
-              <input 
-                type="text" 
+              <input
+                type="text"
+                name="subject"
+                value={form.subject}
+                onChange={handleChange}
                 className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:border-blue-500 focus:outline-none transition-colors"
                 placeholder="Project collaboration"
+                required
               />
             </div>
             <div>
               <div className="block text-gray-300 text-sm mb-2">Message</div>
-              <textarea 
-                rows="4" 
+              <textarea
+                rows="4"
+                name="message"
+                value={form.message}
+                onChange={handleChange}
                 className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:border-blue-500 focus:outline-none transition-colors resize-none"
                 placeholder="Tell me about your project..."
+                required
               ></textarea>
             </div>
-            <button 
-              className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-              onClick={() => alert('Message sent! (This is a demo - integrate with your preferred email service)')}
+            <button
+              type="submit"
+              className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-60"
+              disabled={loading}
             >
-              Send Message
+              {loading ? 'Sending...' : 'Send Message'}
             </button>
-          </div>
-        </div> 
+            {status && (
+              <div className={`text-center mt-2 font-semibold ${status.includes('success') ? 'text-green-400' : 'text-red-400'}`}>{status}</div>
+            )}
+          </form>
+        </div>
       </div>
     </div>
   </div>
-);
+  );
+};
 
 export default ContactPage;

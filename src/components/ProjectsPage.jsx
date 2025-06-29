@@ -32,8 +32,8 @@ const ProjectsPage = ({ projects }) => {
                 />
                 {/* More info overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <span className="text-white text-xl font-semibold bg-black/40 px-4 py-2 rounded-lg tracking-wide">
-                    Expand
+                  <span className="text-white text-lg font-semibold bg-black/40 px-4 py-2 rounded-lg tracking-wide">
+                    Read More
                   </span>
                 </div>
               </div>

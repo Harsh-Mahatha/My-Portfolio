@@ -28,7 +28,7 @@ const ContactPage = () => (
                 <MapPin className="text-purple-400" size={24} />
                 <div>
                   <div className="text-gray-400 text-sm">Location</div>
-                  <div className="text-white">H-17/348, Sangam Vihar, New Delhi - 110080</div>
+                  <div className="text-white">New Delhi, India</div>
                 </div>
               </div>
               <div className="flex items-center gap-4 p-4 bg-gray-800/30 rounded-lg border border-gray-700">

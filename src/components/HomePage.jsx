@@ -1,12 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import TechParticles from './TechParticles';
 
 const HomePage = ({ projects }) => (
   <div className="min-h-screen pt-20">
-    {/* Hero Section */}
+    
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20"></div>
+      {/* Tech Particle Animation Layer - now above the gradient */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-10">
+        <TechParticles />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20 z-0"></div>
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <div className="mb-8">
+          <img
+            src="/Images/Me.jpg"
+            alt="Harsh Mahatha profile"
+            className="mx-auto mb-6 w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-purple-500 shadow-lg"
+          />
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">
             HARSH MAHATHA
           </h1>
@@ -26,18 +37,18 @@ const HomePage = ({ projects }) => (
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button
-            onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
-            className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+          <Link
+            to="/projects"
+            className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl text-center"
           >
             View My Work
-          </button>
-          <button
-            onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
-            className="px-8 py-4 border-2 border-gray-600 hover:border-white text-gray-300 hover:text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+          </Link>
+          <Link
+            to="/contact"
+            className="px-8 py-4 border-2 border-gray-600 hover:border-white text-gray-300 hover:text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 text-center"
           >
             Get In Touch
-          </button>
+          </Link>
         </div>
       </div>
       {/* Animated Background Elements */}
@@ -56,7 +67,7 @@ const HomePage = ({ projects }) => (
             <div className="text-gray-300">Projects Completed</div>
           </div>
           <div className="p-6">
-            <div className="text-4xl font-bold text-purple-400 mb-2">2+</div>
+            <div className="text-4xl font-bold text-purple-400 mb-2">1+</div>
             <div className="text-gray-300">Years Experience</div>
           </div>
           <div className="p-6">

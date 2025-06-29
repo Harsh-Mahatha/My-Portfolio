@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 public/Downloads/RevR.rar
 *.mp4
+
+.vercel

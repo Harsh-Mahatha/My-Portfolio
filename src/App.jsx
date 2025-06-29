@@ -55,7 +55,7 @@ const Portfolio = () => {
       date: "March 2025",
       status: "Completed",
       image: "/Images/AI.png",
-      videoUrl: "/Videos/AIvid.mp4",
+      videoUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/AIvid-DSp6EFrRI6vkHmI4aYaw9vWm8n3dTw.mp4",
       downloadUrl: "#",
     },
     {
@@ -78,7 +78,7 @@ This website is an unofficial fan-made tools designed to assist players of The B
       date: "January 2025 - Present",
       status: "Live",
       image: "/Images/BB.png",
-      videoUrl: "/Videos/BB.mp4",
+      videoUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/BB-OqYIyfqGuwvx1YSkZ1iwblCJFFzpx1.mp4",
       liveUrl: "www.bazaarbroker.com",
     },
     {
@@ -107,8 +107,8 @@ This website is an unofficial fan-made tools designed to assist players of The B
       date: "September 2024",
       status: "Completed",
       image: "/Images/RevR.png",
-      videoUrl: "/Videos/Revr.mp4",
-      downloadUrl: "/Downloads/RevR.rar",
+      videoUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/Revr-aOZoY16xPAvcVeOa2WvKXlsCrmcKen.mp4",
+      downloadUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/RevR%20x64-04f0XksKgkiWAtrC2dHWoJyyZANUYu.rar",
     },
     {
       id: "platformer-2d",
@@ -129,7 +129,7 @@ This website is an unofficial fan-made tools designed to assist players of The B
       date: "December 2023",
       status: "Completed",
       image: "/Images/CC.png",
-      videoUrl: "/Videos/CC.mp4",
+      videoUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/CC-pNSL7QGxJcTvdBcsuh0rmm8Jo7a1mk.mp4",
       downloadUrl: "/Downloads/CaptainCliffs.rar",
     },
   ];

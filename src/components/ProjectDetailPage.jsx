@@ -35,24 +35,31 @@ return (
             }`}>
                 {project.status}
             </span>
-            <p className="text-gray-300 text-base mb-6 leading-relaxed">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mb-6">
-                {project.tech.map((tech) => (
-                    <span key={tech} className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded text-xs">
-                        {tech}
-                    </span>
-                ))}
-            </div>
+            <p className="text-gray-300 text-base mb-6 leading-relaxed">{project.overview}</p>
             <div className="mb-8">
                 <video src={project.videoUrl} controls className="w-full rounded-xl shadow-lg" />
             </div>
-            <div className="flex gap-4">
-                {project.status !== "Live" && (
-                    <button className="px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded flex items-center gap-2">
-                        <Download size={16} />
-                        Download
-                    </button>
+            <div className="mb-8">
+                <h2 className="text-xl font-semibold mb-2">Technologies Used</h2>
+                <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech) => (
+                        <span key={tech} className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded text-xs">
+                            {tech}
+                        </span>
+                    ))}
+                </div>
+                {project.keyFeatures && project.keyFeatures.length > 0 && (
+                    <div className="mt-4">
+                        <h2 className="text-xl font-semibold mb-2">Key Features</h2>
+                        <ul className="list-disc list-inside space-y-2 text-gray-200">
+                            {project.keyFeatures.map((feature, idx) => (
+                                <li key={idx}>{feature}</li>
+                            ))}
+                        </ul>
+                    </div>
                 )}
+            </div>
+            <div className="flex gap-4 mb-8 justify-start">
                 {project.liveUrl && (
                     <a
                         href={project.liveUrl.startsWith('http') ? project.liveUrl : `https://${project.liveUrl}`}
@@ -65,6 +72,25 @@ return (
                     </a>
                 )}
             </div>
+            {project.status !== "Live" && project.downloadUrl && (
+                <div className="flex mb-2">
+                    {project.id === "escape-ai" ? (
+                        <div className="px-4 py-2 bg-purple-500 text-white rounded flex items-center gap-2 w-full justify-center opacity-60 cursor-not-allowed">
+                            <Download size={16} />
+                            Download Coming soon
+                        </div>
+                    ) : (
+                        <a
+                            href={project.downloadUrl}
+                            download
+                            className="px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded flex items-center gap-2 w-full justify-center"
+                        >
+                            <Download size={16} />
+                            Download
+                        </a>
+                    )}
+                </div>
+            )}
         </div>
     </div>
 );

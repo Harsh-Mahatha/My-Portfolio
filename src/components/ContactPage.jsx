@@ -11,7 +11,6 @@ const ContactPage = () => {
   };
 
   const validateEmail = (email) => {
-    // Simple email regex for validation
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 

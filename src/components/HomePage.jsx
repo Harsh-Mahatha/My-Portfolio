@@ -6,7 +6,6 @@ const HomePage = ({ projects }) => (
   <div className="min-h-screen pt-20">
     
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Tech Particle Animation Layer - now above the gradient */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-10">
         <TechParticles />
       </div>

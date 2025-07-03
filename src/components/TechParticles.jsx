@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 
-// Add your icon image paths here (SVG or PNG, ideally transparent background)
 const ICONS = [
   '/Images/Unity.png',
   '/Images/Csharp.png',
@@ -11,7 +10,7 @@ const ICONS = [
   '/Images/Game.png',
 ];
 
-const ICON_SIZE = 48; // px
+const ICON_SIZE = 48; 
 const PARTICLE_COUNT = 30;
 
 function randomBetween(a, b) {

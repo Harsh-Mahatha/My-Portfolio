@@ -87,7 +87,7 @@ return (
                         >
                             <Download size={16} />
                             Download
-                        </a>
+                        </a>    
                     )}
                 </div>
             )}

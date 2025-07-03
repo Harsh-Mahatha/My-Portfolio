@@ -26,3 +26,4 @@ public/Downloads/RevR.rar
 *.mp4
 
 .vercel
+.env

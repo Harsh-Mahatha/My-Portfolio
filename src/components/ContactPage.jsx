@@ -10,12 +10,21 @@ const ContactPage = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  const validateEmail = (email) => {
+    // Simple email regex for validation
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
     setStatus(null);
+    if (!validateEmail(form.email)) {
+      setStatus('Please enter a valid email address.');
+      return;
+    }
+    setLoading(true);
     try {
-      const webhookUrl = 'https://discord.com/api/webhooks/1388825218730168420/Kwa3hmEk_dSlZtWoGEdRfCDMX50v2G1sH-P4ZnVzdhNhtGoQfyduTeAU2P60w7k_jTKw'; // <-- Replace with your Discord webhook URL
+      const webhookUrl = import.meta.env.VITE_DISCORD_WEBHOOK_URL;
       const content = `**New Portfolio Contact Form Submission**\n\n**Name:** ${form.name}\n**Email:** ${form.email}\n**Subject:** ${form.subject}\n**Message:** ${form.message}`;
       const res = await fetch(webhookUrl, {
         method: 'POST',
@@ -90,7 +99,7 @@ const ContactPage = () => {
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <ChevronRight className="text-blue-400" size={16} />
-                Full-stack Development Roles
+                Front-End Development Roles
               </div>
             </div>
           </div>

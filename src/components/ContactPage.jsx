@@ -72,13 +72,18 @@ const ContactPage = () => {
                   <div className="text-white">New Delhi, India</div>
                 </div>
               </div>
-              <div className="flex items-center gap-4 p-4 bg-gray-800/30 rounded-lg border border-gray-700">
+              <a
+                href="https://www.linkedin.com/in/harshmahatha/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 bg-gray-800/30 rounded-lg border border-gray-700 hover:bg-gray-700/40 transition"
+              >
                 <Linkedin className="text-blue-500" size={24} />
                 <div>
                   <div className="text-gray-400 text-sm">LinkedIn</div>
-                  <div className="text-white">www.linkedin.com/in/harshmahatha</div>
+                  <div className="text-white">Harsh Mahatha</div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           <div>

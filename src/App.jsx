@@ -170,7 +170,7 @@ This website is an unofficial fan-made tools designed to assist players of The B
 
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+      <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
         <NavBar
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
@@ -178,27 +178,33 @@ This website is an unofficial fan-made tools designed to assist players of The B
           setIsMenuOpen={setIsMenuOpen}
           isScrolled={isScrolled}
         />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <HomePage projects={projects} setCurrentPage={setCurrentPage} />
-            }
-          />
-          <Route
-            path="/about"
-            element={<AboutPage experience={experience} skills={skills} />}
-          />
-          <Route
-            path="/projects"
-            element={<ProjectsPage projects={projects} />}
-          />
-          <Route
-            path="/projects/:id"
-            element={<ProjectDetailPage projects={projects} />}
-          />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
+        <div className="flex-1">
+          <Routes>
+            <Route
+              path="/"
+              element={<HomePage projects={projects} setCurrentPage={setCurrentPage} />}
+            />
+            <Route
+              path="/about"
+              element={<AboutPage experience={experience} skills={skills} />}
+            />
+            <Route
+              path="/projects"
+              element={<ProjectsPage projects={projects} />}
+            />
+            <Route
+              path="/projects/:id"
+              element={<ProjectDetailPage projects={projects} />}
+            />
+            <Route
+              path="/contact"
+              element={<ContactPage />}
+            />
+          </Routes>
+        </div>
+        <footer className="w-full text-center text-xs py-3 opacity-70 border-t border-gray-700 mt-auto">
+          <span>&copy; {new Date().getFullYear()} Harsh. Built by me ofcourse.</span>
+        </footer>
       </div>
     </Router>
   );

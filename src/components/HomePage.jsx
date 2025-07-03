@@ -38,16 +38,23 @@ const HomePage = ({ projects }) => (
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             to="/projects"
-            className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl text-center"
+            className="px-6 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl text-center"
           >
             View My Work
           </Link>
           <Link
             to="/contact"
-            className="px-8 py-4 border-2 border-gray-600 hover:border-white text-gray-300 hover:text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 text-center"
+            className="px-6 py-4 border-2 border-gray-600 hover:border-white text-gray-300 hover:text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 text-center"
           >
             Get In Touch
           </Link>
+          <a
+            href="/Downloads/Harsh's Resume.pdf"
+            download
+            className="px-10 py-4 bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl text-center"
+          >
+            Resume
+          </a>
         </div>
       </div>
       {/* Animated Background Elements */}

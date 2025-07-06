@@ -137,10 +137,10 @@ This website is an unofficial fan-made tools designed to assist players of The B
   const experience = [
     {
       company: "The Brown Academy (NZ)",
-      position: "Game Developer (Permanent)",
+      position: "Junior Game Developer",
       duration: "February 2025 - Present",
       description:
-        "Permanent team member contributing to core RPG project and side projects like Bazaar Broker. Writing core C# backend logic, collaborating with cross-functional teams, and delivering live tools.",
+        "As a permanent team member contributing to core RPG project and side projects like Bazaar Broker. Writing core C# backend logic, collaborating with cross-functional teams, and delivering live tools.",
       achievements: [
         "Core C# backend development",
         "Cross-functional collaboration",

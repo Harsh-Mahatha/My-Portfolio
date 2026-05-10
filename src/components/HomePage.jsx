@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import TechParticles from './TechParticles';
+import RecentProjectsCarousel from './RecentProjectsCarousel';
 
 const HomePage = ({ projects }) => (
   <div className="min-h-screen pt-20">
@@ -81,6 +82,9 @@ const HomePage = ({ projects }) => (
         <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
     </section>
+
+    {/* Recent Projects Carousel */}
+    <RecentProjectsCarousel projects={projects} />
 
     {/* Quick Stats */}
     <section className="py-20 bg-gray-900/50">

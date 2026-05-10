@@ -97,7 +97,7 @@ const ContactPage = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-gray-300">
                   <ChevronRight className="text-blue-400" size={16} />
-                  Game Development Opportunities
+                  Web Development Opportunities
                 </div>
                 <div className="flex items-center gap-3 text-gray-300">
                   <ChevronRight className="text-blue-400" size={16} />
@@ -105,11 +105,11 @@ const ContactPage = () => {
                 </div>
                 <div className="flex items-center gap-3 text-gray-300">
                   <ChevronRight className="text-blue-400" size={16} />
-                  Unity & Unreal Engine Projects
+                  Animated UI/UX Projects
                 </div>
                 <div className="flex items-center gap-3 text-gray-300">
                   <ChevronRight className="text-blue-400" size={16} />
-                  Front-End Development Roles
+                  Agentic Coding Roles
                 </div>
               </div>
             </div>

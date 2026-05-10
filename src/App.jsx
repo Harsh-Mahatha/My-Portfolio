@@ -77,7 +77,7 @@ const Portfolio = () => {
         "CSS",
         "Tailwind CSS 4"
       ],
-      date: "March 2025",
+      date: "March 2026",
       status: "Completed",
       image: "/Images/AI.png",
       videoUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/AIvid-DSp6EFrRI6vkHmI4aYaw9vWm8n3dTw.mp4",
@@ -99,7 +99,7 @@ const Portfolio = () => {
         "Custom Stats Button"
       ],
       tech: ["React.js", "C#", "Web Development", "Backend Logic", "Scalar"],
-      date: "January 2025 - Present",
+      date: "January 2025",
       status: "Live",
       image: "/Images/BB.png",
       videoUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/BB-OqYIyfqGuwvx1YSkZ1iwblCJFFzpx1.mp4",
@@ -288,8 +288,18 @@ const Portfolio = () => {
             />
           </Routes>
         </div>
-        <footer className="w-full text-center text-xs py-6 opacity-70 border-t border-gray-700 mt-auto">
-          <span>&copy; {new Date().getFullYear()} Harsh Mahatha. Built by me ofcourse.</span>
+        <footer className="w-full py-6 border-t border-gray-700 mt-auto bg-gray-900/30 text-center">
+          <div className="flex flex-col items-center justify-center gap-3">
+            <div className="flex gap-6">
+              <a href="https://github.com/Harsh-Mahatha" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors font-medium">
+                GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/harshmahatha/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-blue-400 transition-colors font-medium">
+                LinkedIn
+              </a>
+            </div>
+            <span className="text-xs text-gray-500">&copy; {new Date().getFullYear()} Harsh Mahatha. Built by me ofcourse.</span>
+          </div>
         </footer>
       </div>
     </Router>

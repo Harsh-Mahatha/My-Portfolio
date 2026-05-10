@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 
 const ICONS = [
-  '/Images/Unity.png',
+  '/Images/Vue.png',
   '/Images/Csharp.png',
   '/Images/Git.png',
   '/Images/Jira.png',
   '/Images/React.png',
   '/Images/VS.png',
-  '/Images/Game.png',
+  '/Images/Angular.png',
+  '/Images/Nuxt.png'
 ];
 
 const ICON_SIZE = 48; 

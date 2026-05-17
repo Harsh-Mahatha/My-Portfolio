@@ -15,7 +15,8 @@ const ProjectsPage = ({ projects }) => {
             My Projects
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            A showcase of my game development projects, from 2D platformers to AI-powered 3D experiences.
+            A showcase of my development projects, from modern web applications
+            to AI-powered gaming experiences.
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -31,7 +32,11 @@ const ProjectsPage = ({ projects }) => {
                   src={project.image || "/public/Images/Favicon.png"}
                   alt={project.title + " thumbnail"}
                   className="object-cover w-full h-full shadow-lg group-hover:scale-105 transition-transform duration-500"
-                  style={{ maxHeight: '16rem', minHeight: '16rem', background: '#222' }}
+                  style={{
+                    maxHeight: "16rem",
+                    minHeight: "16rem",
+                    background: "#222",
+                  }}
                 />
                 {/* More info overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-black/50">
@@ -43,21 +48,34 @@ const ProjectsPage = ({ projects }) => {
               <div className="p-6 flex-1 flex flex-col">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-1 group-hover:text-blue-400 transition-colors">{project.title}</h3>
-                    <p className="text-blue-400 text-sm font-medium">{project.subtitle}</p>
+                    <h3 className="text-xl font-bold text-white mb-1 group-hover:text-blue-400 transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-blue-400 text-sm font-medium">
+                      {project.subtitle}
+                    </p>
                   </div>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                    project.status === "Live"
-                      ? "bg-green-500/20 text-green-400 border border-green-500/30"
-                      : "bg-blue-500/20 text-blue-400 border border-blue-500/30"
-                  }`}>
+                  <span
+                    className={`px-2 py-1 rounded-full text-xs font-medium ${
+                      project.status === "Live"
+                        ? "bg-green-500/20 text-green-400 border border-green-500/30"
+                        : "bg-blue-500/20 text-blue-400 border border-blue-500/30"
+                    }`}
+                  >
                     {project.status}
                   </span>
                 </div>
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed flex-1">{project.description}</p>
+                <p className="text-gray-300 text-sm mb-4 leading-relaxed flex-1">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {project.tech.map((tech) => (
-                    <span key={tech} className="px-2 py-1 bg-gray-700/50 border border-gray-600/50 text-gray-300 rounded text-xs">{tech}</span>
+                    <span
+                      key={tech}
+                      className="px-2 py-1 bg-gray-700/50 border border-gray-600/50 text-gray-300 rounded text-xs"
+                    >
+                      {tech}
+                    </span>
                   ))}
                 </div>
               </div>

@@ -52,8 +52,9 @@ const Portfolio = () => {
       ],
       date: "April 2026",
       status: "Completed",
-      image: "/Images/AI.png",
-      videoUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/AIvid-DSp6EFrRI6vkHmI4aYaw9vWm8n3dTw.mp4",
+      image: "/Images/Ecom.png",
+      videoUrl:
+        "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/Nuxt%20Ecom%20Showcase.mp4",
     },
     {
       id: "Dimension",
@@ -72,17 +73,14 @@ const Portfolio = () => {
         "On Hover Animations",
         "Animated Trail Borders",
       ],
-      tech: [
-        "HTML",
-        "CSS",
-        "Tailwind CSS 4"
-      ],
+      tech: ["HTML", "CSS", "Tailwind CSS 4"],
       date: "March 2026",
       status: "Completed",
-      image: "/Images/AI.png",
-      videoUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/AIvid-DSp6EFrRI6vkHmI4aYaw9vWm8n3dTw.mp4",
+      image: "/Images/Dimension.png",
+      videoUrl:
+        "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/dimension%20showcase.mp4",
     },
-     {
+    {
       id: "bazaar-broker",
       title: "Bazaar Broker",
       subtitle: "React-based Battle Simulator",
@@ -96,13 +94,14 @@ const Portfolio = () => {
         "Premade Monster Loadouts",
         "Strategy and build testing",
         "Deck Optimization",
-        "Custom Stats Button"
+        "Custom Stats Button",
       ],
       tech: ["React.js", "C#", "Web Development", "Backend Logic", "Scalar"],
       date: "January 2025",
       status: "Live",
       image: "/Images/BB.png",
-      videoUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/BB-OqYIyfqGuwvx1YSkZ1iwblCJFFzpx1.mp4",
+      videoUrl:
+        "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/BB-OqYIyfqGuwvx1YSkZ1iwblCJFFzpx1.mp4",
       liveUrl: "www.bazaarbroker.com",
     },
     {
@@ -137,10 +136,11 @@ const Portfolio = () => {
       date: "March 2025",
       status: "Completed",
       image: "/Images/AI.png",
-      videoUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/AIvid-DSp6EFrRI6vkHmI4aYaw9vWm8n3dTw.mp4",
+      videoUrl:
+        "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/AIvid-DSp6EFrRI6vkHmI4aYaw9vWm8n3dTw.mp4",
       downloadUrl: "#",
     },
-   
+
     {
       id: "car-racing",
       title: "RevR Car Racing",
@@ -167,8 +167,8 @@ const Portfolio = () => {
       date: "September 2024",
       status: "Completed",
       image: "/Images/RevR.png",
-      videoUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/Revr-aOZoY16xPAvcVeOa2WvKXlsCrmcKen.mp4",
-      downloadUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/RevR%20x64-04f0XksKgkiWAtrC2dHWoJyyZANUYu.rar",
+      videoUrl:
+        "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/Revr-aOZoY16xPAvcVeOa2WvKXlsCrmcKen.mp4",
     },
     {
       id: "platformer-2d",
@@ -189,7 +189,8 @@ const Portfolio = () => {
       date: "December 2023",
       status: "Completed",
       image: "/Images/CC.png",
-      videoUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/CC-pNSL7QGxJcTvdBcsuh0rmm8Jo7a1mk.mp4",
+      videoUrl:
+        "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/CC-pNSL7QGxJcTvdBcsuh0rmm8Jo7a1mk.mp4",
       downloadUrl: "/Downloads/CaptainCliffs.rar",
     },
   ];
@@ -251,7 +252,7 @@ const Portfolio = () => {
   const skills = {
     "Programming Languages": ["Javascript", "TypeScript", "C#", "C++"],
     "JS FrameWorks/Libraries": ["React.js", "Vue.js", "Angular.js", "Nuxt.js"],
-    "Other Skills": ["Agentic Coding","Tailwind CSS", "Git", "JIRA"],
+    "Other Skills": ["Agentic Coding", "Tailwind CSS", "Git", "JIRA"],
   };
 
   return (
@@ -268,7 +269,9 @@ const Portfolio = () => {
           <Routes>
             <Route
               path="/"
-              element={<HomePage projects={projects} setCurrentPage={setCurrentPage} />}
+              element={
+                <HomePage projects={projects} setCurrentPage={setCurrentPage} />
+              }
             />
             <Route
               path="/about"
@@ -282,23 +285,33 @@ const Portfolio = () => {
               path="/projects/:id"
               element={<ProjectDetailPage projects={projects} />}
             />
-            <Route
-              path="/contact"
-              element={<ContactPage />}
-            />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </div>
         <footer className="w-full py-6 border-t border-gray-700 mt-auto bg-gray-900/30 text-center">
           <div className="flex flex-col items-center justify-center gap-3">
             <div className="flex gap-6">
-              <a href="https://github.com/Harsh-Mahatha" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors font-medium">
+              <a
+                href="https://github.com/Harsh-Mahatha"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-400 hover:text-white transition-colors font-medium"
+              >
                 GitHub
               </a>
-              <a href="https://www.linkedin.com/in/harshmahatha/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-blue-400 transition-colors font-medium">
+              <a
+                href="https://www.linkedin.com/in/harshmahatha/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-400 hover:text-blue-400 transition-colors font-medium"
+              >
                 LinkedIn
               </a>
             </div>
-            <span className="text-xs text-gray-500">&copy; {new Date().getFullYear()} Harsh Mahatha. Built by me ofcourse.</span>
+            <span className="text-xs text-gray-500">
+              &copy; {new Date().getFullYear()} Harsh Mahatha. Built by me
+              ofcourse.
+            </span>
           </div>
         </footer>
       </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import { Download, ExternalLink } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
+import BackgroundOrbs from "./BackgroundOrbs";
+import CircuitTrailWrapper from "./CircuitTrailWrapper";
 
 const ProjectDetailPage = ({ projects }) => {
   const { id } = useParams();
@@ -21,8 +23,9 @@ const ProjectDetailPage = ({ projects }) => {
   }
 
 return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white pt-24 pb-16">
-        <div className="max-w-3xl mx-auto px-4">
+    <div className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white pt-24 pb-16 overflow-hidden">
+        <BackgroundOrbs />
+        <div className="relative z-10 max-w-3xl mx-auto px-4">
             <button className="mb-6 text-blue-400 hover:underline" onClick={() => navigate(-1)}>
                 ← Back to Projects
             </button>
@@ -35,30 +38,30 @@ return (
             }`}>
                 {project.status}
             </span>
-            <p className="text-gray-300 text-base mb-6 leading-relaxed">{project.overview}</p>
-            <div className="mb-8">
-                <video src={project.videoUrl} controls className="w-full rounded-xl shadow-lg" />
-            </div>
-            <div className="mb-8">
-                <h2 className="text-xl font-semibold mb-2">Technologies Used</h2>
+            <p className="text-gray-300 text-base mb-6 leading-relaxed bg-gray-800/30 p-4 rounded-xl border border-gray-700/50 backdrop-blur-sm">{project.overview}</p>
+            <CircuitTrailWrapper containerClassName="mb-8" className="bg-gray-800/50">
+                <video src={project.videoUrl} controls className="w-full shadow-lg rounded-xl" />
+            </CircuitTrailWrapper>
+            <CircuitTrailWrapper containerClassName="mb-8" className="bg-gray-800/30 p-8">
+                <h2 className="text-xl font-semibold mb-2 text-white">Technologies Used</h2>
                 <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech) => (
-                        <span key={tech} className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded text-xs">
+                        <span key={tech} className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded text-xs border border-gray-600/50">
                             {tech}
                         </span>
                     ))}
                 </div>
                 {project.keyFeatures && project.keyFeatures.length > 0 && (
-                    <div className="mt-4">
-                        <h2 className="text-xl font-semibold mb-2">Key Features</h2>
-                        <ul className="list-disc list-inside space-y-2 text-gray-200">
+                    <div className="mt-8">
+                        <h2 className="text-xl font-semibold mb-4 text-white">Key Features</h2>
+                        <ul className="list-disc list-inside space-y-3 text-gray-300 marker:text-blue-500">
                             {project.keyFeatures.map((feature, idx) => (
                                 <li key={idx}>{feature}</li>
                             ))}
                         </ul>
                     </div>
                 )}
-            </div>
+            </CircuitTrailWrapper>
             <div className="flex gap-4 mb-8 justify-start">
                 {project.liveUrl && (
                     <a

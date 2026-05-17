@@ -24,6 +24,87 @@ const Portfolio = () => {
 
   const projects = [
     {
+      id: "Nuxt-ecommerce",
+      title: "Ecommerce Website",
+      subtitle: "Nuxt 4 Based Ecommerce Website",
+      description:
+        "A E-commerce website built with nuxt 4, typescript and tailwind css with modern design and all the standard features of e-commerce using a mock product API.",
+      overview:
+        "A fully functional E-commerce web application built using Nuxt.js 4, TypeScript, and Tailwind CSS, featuring modern UI with dynamic product listings, product detail pages, shopping cart functionality, user authentication, login page, change password module, order history tracking, and a complete checkout flow handled through Nitro Server API integration. The application uses a Mock Product API to simulate real-world E-commerce operations, API handling, and seamless user interactions.",
+      keyFeatures: [
+        "Dynamic product listings",
+        "Product detail pages",
+        "Shopping cart functionality",
+        "User authentication",
+        "Login page",
+        "Change password module",
+        "Order history tracking",
+        "Complete checkout flow",
+      ],
+      tech: [
+        "Nuxt 4",
+        "TypeScript",
+        "Tailwind CSS",
+        "Nitro Server API",
+        "Pinia",
+        "Mock Product API",
+        "Pinia State Persistence",
+      ],
+      date: "April 2026",
+      status: "Completed",
+      image: "/Images/Ecom.png",
+      videoUrl:
+        "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/Nuxt%20Ecom%20Showcase.mp4",
+    },
+    {
+      id: "Dimension",
+      title: "Animated Landing Page",
+      subtitle: "Landing Page using Custom Tailwind animations",
+      description:
+        "Created a modern product landing page for Dimension using Tailwind CSS with custom animations, keyframes, glassmorphism effects, animated trails, gradient text, interactive hover effects, and visually engaging responsive UI components.",
+      overview:
+        "Developed a visually rich product landing page for Dimension using Tailwind CSS, featuring advanced custom animations and keyframes to create smooth interactive experiences. Implemented modern UI trends such as glassmorphism, animated trails, gradient backgrounds, and gradient text effects to enhance the overall design aesthetic. Added engaging hover interactions for buttons, cards, and sections, focusing on creating a polished, dynamic, and user-friendly frontend experience.",
+      keyFeatures: [
+        "Linear Gradients",
+        "Conic Gradients",
+        "Animated Text Gradients",
+        "Glassmorphism",
+        "Smooth Custom Animations",
+        "On Hover Animations",
+        "Animated Trail Borders",
+      ],
+      tech: ["HTML", "CSS", "Tailwind CSS 4"],
+      date: "March 2026",
+      status: "Completed",
+      image: "/Images/Dimension.png",
+      videoUrl:
+        "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/dimension%20showcase.mp4",
+    },
+    {
+      id: "bazaar-broker",
+      title: "Bazaar Broker",
+      subtitle: "React-based Battle Simulator",
+      description:
+        "Developed a battle simulator web app for the game The Bazaar, enabling players to test strategies and builds. Live application with C# backend logic and cross-functional team collaboration.",
+      overview: `As a player, one thing that always annoyed me was figuring out whether something should go on the or of the core. 😅 I can't be the only one who's spent way too much time doing the math or second-guessing myself. So, I started building a little to help with that!
+    This website is an unofficial fan-made tools designed to assist players of The Bazaar. `,
+      keyFeatures: [
+        "Interactive battle simulations",
+        "Custom Decks",
+        "Premade Monster Loadouts",
+        "Strategy and build testing",
+        "Deck Optimization",
+        "Custom Stats Button",
+      ],
+      tech: ["React.js", "C#", "Web Development", "Backend Logic", "Scalar"],
+      date: "January 2025",
+      status: "Live",
+      image: "/Images/BB.png",
+      videoUrl:
+        "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/BB-OqYIyfqGuwvx1YSkZ1iwblCJFFzpx1.mp4",
+      liveUrl: "www.bazaarbroker.com",
+    },
+    {
       id: "escape-ai",
       title: "Escape the AI",
       subtitle: "AI-powered 3D Psychological Thriller",
@@ -55,32 +136,11 @@ const Portfolio = () => {
       date: "March 2025",
       status: "Completed",
       image: "/Images/AI.png",
-      videoUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/AIvid-DSp6EFrRI6vkHmI4aYaw9vWm8n3dTw.mp4",
+      videoUrl:
+        "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/AIvid-DSp6EFrRI6vkHmI4aYaw9vWm8n3dTw.mp4",
       downloadUrl: "#",
     },
-    {
-      id: "bazaar-broker",
-      title: "Bazaar Broker",
-      subtitle: "React-based Battle Simulator",
-      description:
-        "Developed a battle simulator web app for the game The Bazaar, enabling players to test strategies and builds. Live application with C# backend logic and cross-functional team collaboration.",
-      overview: `As a player, one thing that always annoyed me was figuring out whether something should go on the or of the core. 😅 I can't be the only one who's spent way too much time doing the math or second-guessing myself. So, I started building a little to help with that!
-This website is an unofficial fan-made tools designed to assist players of The Bazaar. `,
-      keyFeatures: [
-        "Interactive battle simulations",
-        "Custom Decks",
-        "Premade Monster Loadouts",
-        "Strategy and build testing",
-        "Deck Optimization",
-        "Custom Stats Button"
-      ],
-      tech: ["React.js", "C#", "Web Development", "Backend Logic", "Scalar"],
-      date: "January 2025 - Present",
-      status: "Live",
-      image: "/Images/BB.png",
-      videoUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/BB-OqYIyfqGuwvx1YSkZ1iwblCJFFzpx1.mp4",
-      liveUrl: "www.bazaarbroker.com",
-    },
+
     {
       id: "car-racing",
       title: "RevR Car Racing",
@@ -107,8 +167,8 @@ This website is an unofficial fan-made tools designed to assist players of The B
       date: "September 2024",
       status: "Completed",
       image: "/Images/RevR.png",
-      videoUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/Revr-aOZoY16xPAvcVeOa2WvKXlsCrmcKen.mp4",
-      downloadUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/RevR%20x64-04f0XksKgkiWAtrC2dHWoJyyZANUYu.rar",
+      videoUrl:
+        "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/Revr-aOZoY16xPAvcVeOa2WvKXlsCrmcKen.mp4",
     },
     {
       id: "platformer-2d",
@@ -129,16 +189,44 @@ This website is an unofficial fan-made tools designed to assist players of The B
       date: "December 2023",
       status: "Completed",
       image: "/Images/CC.png",
-      videoUrl: "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/CC-pNSL7QGxJcTvdBcsuh0rmm8Jo7a1mk.mp4",
+      videoUrl:
+        "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/CC-pNSL7QGxJcTvdBcsuh0rmm8Jo7a1mk.mp4",
       downloadUrl: "/Downloads/CaptainCliffs.rar",
     },
   ];
 
   const experience = [
     {
+      company: "WebReinvent Technologies",
+      position: "Frontend Developer Trainee",
+      duration: "March 2026 - Present",
+      description:
+        "Working as a Frontend Developer, learning and using modern technologies like Vue.js and Nuxt.js.Contributing to real-world projects such as the Toolstation website. Gaining hands-on experience withversion control, following GitFlow practices, and collaborating through GitLab for efficient team-based development.",
+      achievements: [
+        "Working on Nuxt.js and Vue.js",
+        "Toolstation (UK)",
+        "Toolstation (EU)",
+        "GitFlow practices",
+        "GitLab",
+      ],
+    },
+    {
+      company: "Admiral India",
+      position: "SDE Intern",
+      duration: "September 2025 - March 2026",
+      description:
+        "Gaining hands-on experience in core programming, full-stack development, and DevOps practices. Workingin an agile environment with technologies such as Java Spring Boot, React, and Angular to build andmaintain scalable applications. Actively using DevOps tools including Git and Jenkins, while gainingexposure to on-site professional work culture and real-world project requirements.",
+      achievements: [
+        "Full Stack Practices",
+        "Java Spring Boot, React, and Angular",
+        "Git and Jenkins",
+        "On-site professional work culture",
+      ],
+    },
+    {
       company: "The Brown Academy (NZ)",
       position: "Junior Game Developer",
-      duration: "February 2025 - Present",
+      duration: "February 2025 - June 2025",
       description:
         "As a permanent team member contributing to core RPG project and side projects like Bazaar Broker. Writing core C# backend logic, collaborating with cross-functional teams, and delivering live tools.",
       achievements: [
@@ -162,10 +250,9 @@ This website is an unofficial fan-made tools designed to assist players of The B
   ];
 
   const skills = {
-    "Programming Languages": ["C++", "C#"],
-    "Game Engines": ["Unity Engine", "Unreal Engine"],
-    "Web Development": ["React.js", "Frontend Development"],
-    "Game Development": ["3D Modeling", "Pixel Art", "UI Design", "Animation"],
+    "Programming Languages": ["Javascript", "TypeScript", "C#", "C++"],
+    "JS FrameWorks/Libraries": ["React.js", "Vue.js", "Angular.js", "Nuxt.js"],
+    "Other Skills": ["Agentic Coding", "Tailwind CSS", "Git", "JIRA"],
   };
 
   return (
@@ -182,7 +269,9 @@ This website is an unofficial fan-made tools designed to assist players of The B
           <Routes>
             <Route
               path="/"
-              element={<HomePage projects={projects} setCurrentPage={setCurrentPage} />}
+              element={
+                <HomePage projects={projects} setCurrentPage={setCurrentPage} />
+              }
             />
             <Route
               path="/about"
@@ -196,14 +285,34 @@ This website is an unofficial fan-made tools designed to assist players of The B
               path="/projects/:id"
               element={<ProjectDetailPage projects={projects} />}
             />
-            <Route
-              path="/contact"
-              element={<ContactPage />}
-            />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </div>
-        <footer className="w-full text-center text-xs py-3 opacity-70 border-t border-gray-700 mt-auto">
-          <span>&copy; {new Date().getFullYear()} Harsh. Built by me ofcourse.</span>
+        <footer className="w-full py-6 border-t border-gray-700 mt-auto bg-gray-900/30 text-center">
+          <div className="flex flex-col items-center justify-center gap-3">
+            <div className="flex gap-6">
+              <a
+                href="https://github.com/Harsh-Mahatha"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-400 hover:text-white transition-colors font-medium"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/harshmahatha/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-400 hover:text-blue-400 transition-colors font-medium"
+              >
+                LinkedIn
+              </a>
+            </div>
+            <span className="text-xs text-gray-500">
+              &copy; {new Date().getFullYear()} Harsh Mahatha. Built by me
+              ofcourse.
+            </span>
+          </div>
         </footer>
       </div>
     </Router>

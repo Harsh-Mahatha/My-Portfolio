@@ -1,39 +1,43 @@
 import React from "react";
+import BackgroundOrbs from "./BackgroundOrbs";
+import CircuitTrailWrapper from "./CircuitTrailWrapper";
 
 const AboutPage = ({ experience, skills }) => (
-  <div className="min-h-screen pt-24 pb-16">
-    <div className="max-w-6xl mx-auto px-4">
+  <div className="relative min-h-screen pt-24 pb-16 overflow-hidden">
+    <BackgroundOrbs />
+    <div className="relative z-10 max-w-6xl mx-auto px-4">
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
           About Me
         </h1>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Creative and motivated Game Developer with a solid background in
-          building games and a flair for frontend web development.
+          Creative and motivated Programmer with a solid background in
+          building scalable modern web apps and a flair for game development.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <div className="space-y-6">
+        <CircuitTrailWrapper containerClassName="mb-8" className="p-8 h-full bg-gray-800/30">
           <h2 className="text-2xl font-bold text-white mb-4">My Story</h2>
-          <p className="text-gray-300 leading-relaxed">
-            I'm a passionate game developer proficient in programming languages
-            and tools such as C#, Unity, and Unreal Engine. I'm eager to
-            collaborate with creative teams to bring innovative game concepts to
+          <p className="text-gray-300 leading-relaxed mb-4">
+            I'm a passionate web developer proficient in programming languages
+            and frameworks such as javascript, typescript, C# , C++, react.js, vue.js and angular.js
+            with strong foundation in css animations.
+            I'm eager to collaborate with creative teams to bring innovative web applications to
             life and continually learn new technologies and methodologies.
           </p>
           <p className="text-gray-300 leading-relaxed">
-            Currently working as a permanent team member at The Brown Academy
-            (NZ), I've expanded my role beyond core RPG projects to contribute
-            to innovative tools like Bazaar Broker, demonstrating my versatility
-            in both game development and web technologies.
+            Currently working as a Front-End Developer at WebReinvent Technologies,
+            contributing to live projects for various clients. Top Clients of ours 
+            include ToolStation (UK), (EU).   
+            Contributed to inhouse projects like company website and ERP Websites.
           </p>
-        </div>
+        </CircuitTrailWrapper>
 
-        <div className="space-y-6">
+        <CircuitTrailWrapper containerClassName="h-full" className="p-8 h-full bg-gray-800/30">
           <h2 className="text-2xl font-bold text-white mb-4">Education</h2>
           <div className="space-y-4">
-            <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700/50 hover:border-gray-600 transition-colors">
               <h3 className="font-semibold text-white">
                 Bachelor of Technology
               </h3>
@@ -41,7 +45,7 @@ const AboutPage = ({ experience, skills }) => (
               <p className="text-gray-400">JEMTEC, Greater Noida</p>
               <p className="text-gray-500 text-sm">2025</p>
             </div>
-            <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700/50 hover:border-gray-600 transition-colors">
               <h3 className="font-semibold text-white">
                 Senior Secondary Education
               </h3>
@@ -49,7 +53,7 @@ const AboutPage = ({ experience, skills }) => (
               <p className="text-gray-500 text-sm">2020</p>
             </div>
           </div>
-        </div>
+        </CircuitTrailWrapper>
       </div>
 
       {/* Skills Section */}
@@ -57,7 +61,7 @@ const AboutPage = ({ experience, skills }) => (
         <h2 className="text-3xl font-bold text-white mb-8 text-center">
           Technical Skills
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Object.entries(skills).map(([category, skillList]) => (
             <div
               key={category}
@@ -80,21 +84,23 @@ const AboutPage = ({ experience, skills }) => (
             Achievements
           </h2>
           <div className="space-y-6 max-w-6xl mx-auto">
-            <div className="p-6 bg-gray-800/30 rounded-lg border border-gray-700">
-          <h3 className="text-xl font-semibold text-white mb-2">
-            Co-Author – Research Publication (<a href="http://cssp.thehinweis.com/2024/" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline hover:text-blue-300">CSSP Conference</a>)
-          </h3>
-          <p className="text-gray-300 mb-2">
-            Co-authored a research paper accepted at the Control System and
-            Signal Processing (CSSP) conference, organized by Hinweis
-            Research. The paper focused on a novel model designed to enhance
-            NPC behavior in video games by leveraging the capabilities of the
-            OpenAI API. We utilized the Unity Engine to simulate and test this
-            model within interactive game environments, demonstrating how
-            AI-driven responses can make NPCs more dynamic, realistic, and
-            adaptive to player interactions.
-          </p>
-            </div>
+            <CircuitTrailWrapper>
+              <div className="p-8 bg-gray-800/30">
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  Co-Author – Research Publication (<a href="http://cssp.thehinweis.com/2024/" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline hover:text-blue-300">CSSP Conference</a>)
+                </h3>
+                <p className="text-gray-300 mb-2">
+                  Co-authored a research paper accepted at the Control System and
+                  Signal Processing (CSSP) conference, organized by Hinweis
+                  Research. The paper focused on a novel model designed to enhance
+                  NPC behavior in video games by leveraging the capabilities of the
+                  OpenAI API. We utilized the Unity Engine to simulate and test this
+                  model within interactive game environments, demonstrating how
+                  AI-driven responses can make NPCs more dynamic, realistic, and
+                  adaptive to player interactions.
+                </p>
+              </div>
+            </CircuitTrailWrapper>
           </div>
         </div>
 

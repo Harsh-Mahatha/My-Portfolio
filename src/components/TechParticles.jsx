@@ -1,17 +1,17 @@
 import React, { useEffect, useRef } from 'react';
 
 const ICONS = [
-  '/Images/Unity.png',
+  '/Images/Vue.png',
   '/Images/Csharp.png',
   '/Images/Git.png',
   '/Images/Jira.png',
   '/Images/React.png',
   '/Images/VS.png',
-  '/Images/Game.png',
+  '/Images/Angular.png',
+  '/Images/Nuxt.png'
 ];
 
-const ICON_SIZE = 48; 
-const PARTICLE_COUNT = 30;
+const ICON_SIZE = 48;
 
 function randomBetween(a, b) {
   return Math.random() * (b - a) + a;
@@ -39,7 +39,8 @@ const TechParticles = () => {
     let height = canvas.height = canvas.offsetHeight;
 
     // Initialize particles
-    particles.current = Array.from({ length: PARTICLE_COUNT }, (_, i) => ({
+    const particleCount = window.innerWidth < 768 ? 20 : 30;
+    particles.current = Array.from({ length: particleCount }, (_, i) => ({
       x: randomBetween(0, width - ICON_SIZE),
       y: randomBetween(0, height - ICON_SIZE),
       dx: randomBetween(-0.5, 0.5),

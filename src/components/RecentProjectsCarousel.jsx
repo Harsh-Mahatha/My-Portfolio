@@ -36,7 +36,7 @@ const RecentProjectsCarousel = ({ projects }) => {
           <div className="flex flex-col md:flex-row min-h-[350px] animate-fade-in p-2 rounded-md relative transition-all duration-500" key={currentIndex}>
             <div className="md:w-1/2 h-64 md:h-auto relative overflow-hidden group cursor-pointer" onClick={() => navigate(`/projects/${currentProject.id}`)}>
                <img
-                  src={currentProject.image || "/public/Images/Favicon.png"}
+                  src={currentProject.image || "/Images/Favicon.png"}
                   alt={currentProject.title + " thumbnail"}
                   className="object-cover w-full h-full shadow-lg group-hover:scale-105 rounded-md  transition-transform duration-500"
                   style={{ background: '#222' }}

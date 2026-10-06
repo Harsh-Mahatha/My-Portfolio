@@ -8,7 +8,9 @@ const ICONS = [
   '/Images/React.png',
   '/Images/VS.png',
   '/Images/Angular.png',
-  '/Images/Nuxt.png'
+  '/Images/Nuxt.png',
+  '/Images/node.webp',
+  '/Images/postgre.webp'
 ];
 
 const ICON_SIZE = 48;

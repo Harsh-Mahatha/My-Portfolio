@@ -63,7 +63,7 @@ const HomePage = ({ projects }) => (
             Get In Touch
           </Link>
           <a
-            href="/Downloads/Harsh's Resume.pdf"
+            href="/Downloads/Harsh Mahatha's Resume.pdf"
             download
             className="relative inline-flex h-14 overflow-hidden rounded-lg p-[2px] transition-transform hover:scale-105 hover:shadow-[0_0_20px_rgba(236,72,153,0.4)]"
           >

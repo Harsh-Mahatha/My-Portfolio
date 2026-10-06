@@ -3,6 +3,7 @@ import { Download, ExternalLink, Gamepad2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import BackgroundOrbs from "./BackgroundOrbs";
 import CircuitTrailWrapper from "./CircuitTrailWrapper";
+import { getStatusClass } from "./statusStyles";
 
 const ProjectsPage = ({ projects }) => {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ const ProjectsPage = ({ projects }) => {
               <div className="relative h-64 bg-gradient-to-br from-blue-900/20 to-purple-900/20 flex items-center justify-center overflow-hidden">
                 {/* Video thumbnail */}
                 <img
-                  src={project.image || "/public/Images/Favicon.png"}
+                  src={project.image || "/Images/Favicon.png"}
                   alt={project.title + " thumbnail"}
                   className="object-cover w-full h-full shadow-lg group-hover:scale-105 transition-transform duration-500"
                   style={{
@@ -56,11 +57,7 @@ const ProjectsPage = ({ projects }) => {
                     </p>
                   </div>
                   <span
-                    className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      project.status === "Live"
-                        ? "bg-green-500/20 text-green-400 border border-green-500/30"
-                        : "bg-blue-500/20 text-blue-400 border border-blue-500/30"
-                    }`}
+                    className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusClass(project.status)}`}
                   >
                     {project.status}
                   </span>

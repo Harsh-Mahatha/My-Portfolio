@@ -29,7 +29,7 @@ const HomePage = ({ projects }) => (
             HARSH MAHATHA
           </h1>
           <p className="text-xl md:text-3xl text-gray-300 mb-8">
-            Front-end Engineer 
+            Full Stack Developer
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <span className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full border border-blue-500/30">
@@ -38,8 +38,11 @@ const HomePage = ({ projects }) => (
             <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">
               Vue.js
             </span>
-            <span className="px-4 py-2 bg-pink-500/20 text-pink-300 rounded-full border border-pink-500/30">
-             Angular.js
+            <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full border border-green-500/30">
+              Node.js
+            </span>
+            <span className="px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full border border-cyan-500/30">
+              PostgreSQL
             </span>
           </div>
         </div>
@@ -95,11 +98,11 @@ const HomePage = ({ projects }) => (
             <div className="text-gray-300">Projects Completed</div>
           </div>
           <div className="p-6">
-            <div className="text-4xl font-bold text-purple-400 mb-2">1+</div>
+            <div className="text-4xl font-bold text-purple-400 mb-2">2+</div>
             <div className="text-gray-300">Years Experience</div>
           </div>
           <div className="p-6">
-            <div className="text-4xl font-bold text-pink-400 mb-2">5+</div>
+            <div className="text-4xl font-bold text-pink-400 mb-2">10+</div>
             <div className="text-gray-300">Technologies</div>
           </div>
         </div>

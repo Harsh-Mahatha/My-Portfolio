@@ -24,6 +24,38 @@ const Portfolio = () => {
 
   const projects = [
     {
+      id: "online-invoicing",
+      title: "Online Invoicing Solution",
+      subtitle: "Full Stack Invoicing & Inventory Platform",
+      description:
+        "A full stack online invoicing platform built for my family business with Next.js, Express and PostgreSQL, covering invoicing, stock management, ledgers and customer management while cutting invoice software costs by 80%.",
+      overview:
+        "Developed a complete online invoicing platform for my family business to replace an expensive third-party invoicing software, reducing invoice software costs by 80%. The platform handles the day-to-day operations of the business end to end: creating and printing invoices, managing stock and inventory levels, maintaining customer records, and keeping an accurate ledger of transactions and outstanding balances. The frontend is built with Next.js for a fast, responsive interface, while an Express.js REST API backed by PostgreSQL and Prisma ORM provides reliable data storage, consistent business logic and data integrity for critical financial records.",
+      keyFeatures: [
+        "Invoice creation and management",
+        "Print-ready invoice generation",
+        "Stock and inventory management",
+        "Customer ledger and balance tracking",
+        "Customer management",
+        "REST API with Express.js",
+        "Relational data modeling with PostgreSQL",
+        "80% reduction in invoice software costs",
+      ],
+      tech: [
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "Prisma",
+        "REST API",
+      ],
+      date: "September 2026",
+      status: "In Progress",
+      image: "/Images/Invoice.png",
+      videoUrl:
+        "https://2daul8qhawhwqdvv.public.blob.vercel-storage.com/Invoicing%20Showcase.mp4",
+    },
+    {
       id: "Nuxt-ecommerce",
       title: "Ecommerce Website",
       subtitle: "Nuxt 4 Based Ecommerce Website",
@@ -251,7 +283,8 @@ const Portfolio = () => {
 
   const skills = {
     "Programming Languages": ["Javascript", "TypeScript", "C#", "C++"],
-    "JS FrameWorks/Libraries": ["React.js", "Vue.js", "Angular.js", "Nuxt.js"],
+    "JS FrameWorks/Libraries": ["React.js", "Next.js", "Vue.js", "Nuxt.js"],
+    "Backend & Databases": ["Node.js", "Express.js", "Prisma", "PostgreSQL"],
     "Other Skills": ["Agentic Coding", "Tailwind CSS", "Git", "JIRA"],
   };
 

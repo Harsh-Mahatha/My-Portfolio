@@ -20,8 +20,9 @@ const AboutPage = ({ experience, skills }) => (
         <CircuitTrailWrapper containerClassName="mb-8" className="p-8 h-full bg-gray-800/30">
           <h2 className="text-2xl font-bold text-white mb-4">My Story</h2>
           <p className="text-gray-300 leading-relaxed mb-4">
-            I'm a passionate web developer proficient in programming languages
+            I'm a passionate full stack developer proficient in programming languages
             and frameworks such as javascript, typescript, C# , C++, react.js, vue.js and angular.js
+            on the frontend, and node.js, express.js, prisma and postgreSQL on the backend,
             with strong foundation in css animations.
             I'm eager to collaborate with creative teams to bring innovative web applications to
             life and continually learn new technologies and methodologies.

@@ -3,6 +3,7 @@ import { Download, ExternalLink } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
 import BackgroundOrbs from "./BackgroundOrbs";
 import CircuitTrailWrapper from "./CircuitTrailWrapper";
+import { getStatusClass } from "./statusStyles";
 
 const ProjectDetailPage = ({ projects }) => {
   const { id } = useParams();
@@ -31,11 +32,7 @@ return (
             </button>
             <h1 className="text-4xl font-bold mb-2">{project.title}</h1>
             <p className="text-blue-400 text-lg mb-4">{project.subtitle}</p>
-            <span className={`px-2 py-1 rounded-full text-xs font-medium mb-4 inline-block ${
-                project.status === "Live"
-                    ? "bg-green-500/20 text-green-400 border border-green-500/30"
-                    : "bg-blue-500/20 text-blue-400 border border-blue-500/30"
-            }`}>
+            <span className={`px-2 py-1 rounded-full text-xs font-medium mb-4 inline-block ${getStatusClass(project.status)}`}>
                 {project.status}
             </span>
             <p className="text-gray-300 text-base mb-6 leading-relaxed bg-gray-800/30 p-4 rounded-xl border border-gray-700/50 backdrop-blur-sm">{project.overview}</p>

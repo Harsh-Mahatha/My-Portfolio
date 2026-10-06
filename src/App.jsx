@@ -229,13 +229,27 @@ const Portfolio = () => {
 
   const experience = [
     {
+      company: "The Brown Academy (NZ)",
+      position: "Full Stack Developer",
+      duration: "July 2026 - Present",
+      description:
+        "Built XLchess, a full-stack online chess platform using the PERN stack (PostgreSQL, Express.js, React, Node.js) and the Stockfish engine. Developing puzzles, assessments, progress sync, career modules, and core chess workflows. Managing the backend, frontend, deployments, and releases while taking on team lead responsibilities in a startup environment.",
+      achievements: [
+        "Built XLchess on the PERN stack",
+        "Stockfish engine integration",
+        "Puzzles, assessments & career modules",
+        "Deployments and releases",
+        "Team lead responsibilities",
+      ],
+    },
+    {
       company: "WebReinvent Technologies",
       position: "Frontend Developer Trainee",
-      duration: "March 2026 - Present",
+      duration: "March 2026 - July 2026",
       description:
-        "Working as a Frontend Developer, learning and using modern technologies like Vue.js and Nuxt.js.Contributing to real-world projects such as the Toolstation website. Gaining hands-on experience withversion control, following GitFlow practices, and collaborating through GitLab for efficient team-based development.",
+        "Worked as a Frontend Developer, learning and using modern technologies like Vue.js and Nuxt.js. Contributed to real-world projects such as the Toolstation website. Gained hands-on experience with version control, following GitFlow practices, and collaborating through GitLab for efficient team-based development.",
       achievements: [
-        "Working on Nuxt.js and Vue.js",
+        "Worked on Nuxt.js and Vue.js",
         "Toolstation (UK)",
         "Toolstation (EU)",
         "GitFlow practices",

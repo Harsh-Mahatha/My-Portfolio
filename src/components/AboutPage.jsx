@@ -17,7 +17,7 @@ const AboutPage = ({ experience, skills }) => (
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <CircuitTrailWrapper containerClassName="mb-8" className="p-8 h-full bg-gray-800/30">
+        <CircuitTrailWrapper containerClassName="h-full" className="p-8 h-full bg-gray-800/30">
           <h2 className="text-2xl font-bold text-white mb-4">My Story</h2>
           <p className="text-gray-300 leading-relaxed mb-4">
             I'm a passionate full stack developer proficient in programming languages
@@ -28,10 +28,11 @@ const AboutPage = ({ experience, skills }) => (
             life and continually learn new technologies and methodologies.
           </p>
           <p className="text-gray-300 leading-relaxed">
-            Currently working as a Front-End Developer at WebReinvent Technologies,
-            contributing to live projects for various clients. Top Clients of ours 
-            include ToolStation (UK), (EU).   
-            Contributed to inhouse projects like company website and ERP Websites.
+            Currently working as a Full Stack Developer at The Brown Academy (NZ),
+            building XLchess, an online chess platform on the PERN stack with the
+            Stockfish engine, and leading deployments, releases and the team in a
+            startup environment. Previously worked as a Front-End Developer at
+            WebReinvent Technologies on client projects like ToolStation (UK), (EU).
           </p>
         </CircuitTrailWrapper>
 
@@ -62,7 +63,7 @@ const AboutPage = ({ experience, skills }) => (
         <h2 className="text-3xl font-bold text-white mb-8 text-center">
           Technical Skills
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {Object.entries(skills).map(([category, skillList]) => (
             <div
               key={category}
@@ -85,23 +86,21 @@ const AboutPage = ({ experience, skills }) => (
             Achievements
           </h2>
           <div className="space-y-6 max-w-6xl mx-auto">
-            <CircuitTrailWrapper>
-              <div className="p-8 bg-gray-800/30">
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  Co-Author – Research Publication (<a href="http://cssp.thehinweis.com/2024/" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline hover:text-blue-300">CSSP Conference</a>)
-                </h3>
-                <p className="text-gray-300 mb-2">
-                  Co-authored a research paper accepted at the Control System and
-                  Signal Processing (CSSP) conference, organized by Hinweis
-                  Research. The paper focused on a novel model designed to enhance
-                  NPC behavior in video games by leveraging the capabilities of the
-                  OpenAI API. We utilized the Unity Engine to simulate and test this
-                  model within interactive game environments, demonstrating how
-                  AI-driven responses can make NPCs more dynamic, realistic, and
-                  adaptive to player interactions.
-                </p>
-              </div>
-            </CircuitTrailWrapper>
+            <div className="p-8 bg-gray-800/30 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-colors">
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Co-Author – Research Publication (<a href="http://cssp.thehinweis.com/2024/" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline hover:text-blue-300">CSSP Conference</a>)
+              </h3>
+              <p className="text-gray-300 mb-2">
+                Co-authored a research paper accepted at the Control System and
+                Signal Processing (CSSP) conference, organized by Hinweis
+                Research. The paper focused on a novel model designed to enhance
+                NPC behavior in video games by leveraging the capabilities of the
+                OpenAI API. We utilized the Unity Engine to simulate and test this
+                model within interactive game environments, demonstrating how
+                AI-driven responses can make NPCs more dynamic, realistic, and
+                adaptive to player interactions.
+              </p>
+            </div>
           </div>
         </div>
 
